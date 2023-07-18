@@ -1,0 +1,412 @@
+[gd_scene load_steps=35 format=3 uid="uid://3pigyh4cngic"]
+
+[ext_resource type="PackedScene" uid="uid://d10h0praa024q" path="res://Meta/world.tscn" id="1_tucbq"]
+[ext_resource type="PackedScene" uid="uid://bon1ulsuxr2br" path="res://Objects/slime.tscn" id="2_1w5td"]
+[ext_resource type="FontFile" uid="uid://cy436dbo2ce77" path="res://Fonts/NotJamScrawl9.ttf" id="2_vdm6r"]
+[ext_resource type="Texture2D" uid="uid://cdqlyn3us5ilc" path="res://Assets/UIBackgrund.png" id="2_xoytx"]
+[ext_resource type="Script" path="res://Meta/SlimeLayer.gd" id="3_niudm"]
+[ext_resource type="Script" path="res://Meta/statslabel.gd" id="3_reen1"]
+[ext_resource type="Texture2D" uid="uid://c3urgg8fi3vaf" path="res://Assets/RecessTile.png" id="3_s3wbm"]
+[ext_resource type="Texture2D" uid="uid://l0v6oe8frpcl" path="res://Assets/GoldMine.png" id="5_1ckhm"]
+[ext_resource type="Texture2D" uid="uid://b5w78expg48w7" path="res://Assets/HealthShop.png" id="8_4dx8s"]
+[ext_resource type="Texture2D" uid="uid://dy5x2lflrfh18" path="res://Assets/BarricadeShop.png" id="9_fhb1y"]
+[ext_resource type="Texture2D" uid="uid://mhhpy3s85vaw" path="res://Assets/Training.png" id="9_wobxc"]
+[ext_resource type="PackedScene" uid="uid://c4evw7bkmgu3i" path="res://Objects/shop_item.tscn" id="10_etc0g"]
+[ext_resource type="Texture2D" uid="uid://bl6cg6qov8cg0" path="res://Assets/Health_Banner.png" id="11_2lmxj"]
+[ext_resource type="Script" path="res://Meta/DragonHPBar.gd" id="12_furvl"]
+[ext_resource type="Texture2D" uid="uid://yapt28c5efum" path="res://Assets/White_Circle.png" id="13_h0q1m"]
+[ext_resource type="Texture2D" uid="uid://c038jjqb3yc1h" path="res://Assets/DragonHead.png" id="14_y7iku"]
+[ext_resource type="Script" path="res://Meta/EndingBackground.gd" id="17_xoqsq"]
+[ext_resource type="Texture2D" uid="uid://dnueo3kp53jwp" path="res://Assets/Menu/ButtonBoxHover.png" id="18_aj42m"]
+[ext_resource type="Texture2D" uid="uid://6tj2gxh74v8l" path="res://Assets/Menu/ButtonBox.png" id="19_feh7w"]
+[ext_resource type="Texture2D" uid="uid://d37q4qi2sufr8" path="res://Assets/Menu/ButtonBoxClick.png" id="20_uoj4j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rryh0"]
+font = ExtResource("2_vdm6r")
+font_size = 9
+font_color = Color(0.492188, 0.394531, 0.00390625, 1)
+outline_size = 4
+outline_color = Color(0.890625, 0.773438, 0.300781, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xy85"]
+font = ExtResource("2_vdm6r")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_6rsm1"]
+font = ExtResource("2_vdm6r")
+font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybakp"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7ig5"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6dpxa"]
+font = ExtResource("2_vdm6r")
+font_size = 9
+font_color = Color(0.411765, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bnov"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfg78"]
+bg_color = Color(1, 1, 1, 1)
+border_width_right = 8
+border_color = Color(0.490196, 0.490196, 0.490196, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx20n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04teb"]
+texture = ExtResource("18_aj42m")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ox2a5"]
+texture = ExtResource("19_feh7w")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs75d"]
+texture = ExtResource("20_uoj4j")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="Theme" id="Theme_sjtns"]
+default_font = ExtResource("2_vdm6r")
+default_font_size = 54
+BoxContainer/constants/separation = 24
+Button/styles/focus = SubResource("StyleBoxEmpty_tx20n")
+Button/styles/hover = SubResource("StyleBoxTexture_04teb")
+Button/styles/normal = SubResource("StyleBoxTexture_ox2a5")
+Button/styles/pressed = SubResource("StyleBoxTexture_fs75d")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2avc6"]
+font = ExtResource("2_vdm6r")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[node name="GameScreen" type="Node"]
+
+[node name="GameWorld" parent="." instance=ExtResource("1_tucbq")]
+
+[node name="Interface" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="RealWorldThresh" type="Node2D" parent="Interface"]
+unique_name_in_owner = true
+position = Vector2(994, 512)
+
+[node name="GoldCount" type="Label" parent="Interface" groups=["Labels"]]
+texture_filter = 1
+offset_left = 33.0
+offset_top = 24.0
+offset_right = 155.0
+offset_bottom = 37.0
+scale = Vector2(6, 6)
+text = "0g"
+label_settings = SubResource("LabelSettings_rryh0")
+vertical_alignment = 1
+script = ExtResource("3_reen1")
+
+[node name="SlimeLayer" type="Node2D" parent="Interface"]
+script = ExtResource("3_niudm")
+
+[node name="SiderackBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(994, 1.42109e-14)
+scale = Vector2(5, 5)
+texture = ExtResource("3_s3wbm")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 103)
+
+[node name="ShopItem" parent="Interface/SlimeLayer/SiderackBG" instance=ExtResource("10_etc0g")]
+position = Vector2(16, 86)
+scale = Vector2(0.2, 0.2)
+
+[node name="ShopItem2" parent="Interface/SlimeLayer/SiderackBG" instance=ExtResource("10_etc0g")]
+position = Vector2(16, 56)
+scale = Vector2(0.2, 0.2)
+item_type = 2
+
+[node name="ShopItem3" parent="Interface/SlimeLayer/SiderackBG" instance=ExtResource("10_etc0g")]
+position = Vector2(16, 26)
+scale = Vector2(0.2, 0.2)
+item_type = 1
+
+[node name="ShopTitle" type="Label" parent="Interface/SlimeLayer/SiderackBG"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.104
+offset_right = 14.0
+offset_bottom = 8.288
+scale = Vector2(0.69, 0.69)
+text = "Shop"
+label_settings = SubResource("LabelSettings_0xy85")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlimerackBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("2_xoytx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 231, 28)
+
+[node name="HealthPickupBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+position = Vector2(672, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("8_4dx8s")
+centered = false
+
+[node name="Price" type="Label" parent="Interface/SlimeLayer/HealthPickupBG"]
+offset_top = 21.0
+offset_right = 161.0
+offset_bottom = 48.0
+scale = Vector2(0.2, 0.2)
+text = "5g"
+label_settings = SubResource("LabelSettings_6rsm1")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="BarracadeBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+position = Vector2(832, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("9_fhb1y")
+centered = false
+
+[node name="Price" type="Label" parent="Interface/SlimeLayer/BarracadeBG"]
+offset_top = 21.0
+offset_right = 161.0
+offset_bottom = 48.0
+scale = Vector2(0.2, 0.2)
+text = "5g"
+label_settings = SubResource("LabelSettings_6rsm1")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MiningBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("5_1ckhm")
+centered = false
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="TrainingBG" type="Sprite2D" parent="Interface/SlimeLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(992, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("9_wobxc")
+centered = false
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Slime" parent="Interface/SlimeLayer" instance=ExtResource("2_1w5td")]
+position = Vector2(220, 600)
+slime_color = Color(0.584314, 1, 0.552941, 1)
+in_main_world = false
+
+[node name="Slime2" parent="Interface/SlimeLayer" instance=ExtResource("2_1w5td")]
+position = Vector2(320, 600)
+slime_color = Color(1, 0.509804, 0.443137, 1)
+in_main_world = false
+
+[node name="Slime3" parent="Interface/SlimeLayer" instance=ExtResource("2_1w5td")]
+position = Vector2(420, 600)
+slime_color = Color(0.552941, 0.788235, 1, 1)
+in_main_world = false
+
+[node name="Slime4" parent="Interface/SlimeLayer" instance=ExtResource("2_1w5td")]
+position = Vector2(520, 600)
+slime_color = Color(0.721569, 0.658824, 1, 1)
+in_main_world = false
+
+[node name="Slime5" parent="Interface/SlimeLayer" instance=ExtResource("2_1w5td")]
+position = Vector2(620, 600)
+slime_color = Color(0.988235, 1, 0.686275, 1)
+in_main_world = false
+
+[node name="DragonHPBar" type="Control" parent="Interface" groups=["DragonHP"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = 182.0
+offset_right = -199.0
+offset_bottom = -283.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_furvl")
+
+[node name="HPEmpty" type="NinePatchRect" parent="Interface/DragonHPBar"]
+modulate = Color(0.239216, 0, 0, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.2
+anchor_bottom = 0.2
+offset_top = 80.0
+offset_right = -1.52588e-05
+offset_bottom = 59.4
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+texture = ExtResource("11_2lmxj")
+region_rect = Rect2(0, 0, 32, 16)
+patch_margin_left = 11
+patch_margin_top = 7
+patch_margin_right = 11
+patch_margin_bottom = 9
+
+[node name="HPBar" type="ProgressBar" parent="Interface/DragonHPBar" groups=["DragonHP"]]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ybakp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_b7ig5")
+value = 64.91
+show_percentage = false
+
+[node name="HPTexture" type="NinePatchRect" parent="Interface/DragonHPBar/HPBar"]
+modulate = Color(0.699195, 2.08165e-06, 6.73831e-07, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.2
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+texture = ExtResource("11_2lmxj")
+region_rect = Rect2(0, 0, 32, 16)
+patch_margin_left = 11
+patch_margin_top = 7
+patch_margin_right = 11
+patch_margin_bottom = 9
+
+[node name="HPTitle" type="Label" parent="Interface/DragonHPBar"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -3.0
+offset_top = 36.0
+offset_right = -704.0
+offset_bottom = 48.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+text = "Dragon Health"
+label_settings = SubResource("LabelSettings_6dpxa")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Interface"]
+offset_left = 212.0
+offset_top = 41.0
+offset_right = 921.0
+offset_bottom = 61.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_0bnov")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xfg78")
+step = 1.0
+value = 40.0
+show_percentage = false
+
+[node name="WhiteCircle" type="Sprite2D" parent="Interface/ProgressBar"]
+texture_filter = 1
+position = Vector2(-20, 10)
+scale = Vector2(5, 5)
+texture = ExtResource("13_h0q1m")
+
+[node name="DragonHead" type="Sprite2D" parent="Interface/ProgressBar"]
+texture_filter = 1
+position = Vector2(765, 13)
+scale = Vector2(4, 4)
+texture = ExtResource("14_y7iku")
+
+[node name="EndingBackground" type="ColorRect" parent="Interface" groups=["EndingBackground"]]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("17_xoqsq")
+
+[node name="EndingOutcome" type="Label" parent="Interface/EndingBackground"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 300.0
+offset_top = 216.0
+offset_right = -799.0
+offset_bottom = 228.0
+grow_horizontal = 2
+scale = Vector2(10, 10)
+text = "asdasd"
+label_settings = SubResource("LabelSettings_6dpxa")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Interface/EndingBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.7
+anchor_right = 0.8
+anchor_bottom = 0.8
+offset_top = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_sjtns")
+text = "Main Menu"
+
+[node name="Time" type="Label" parent="Interface/EndingBackground"]
+texture_filter = 1
+offset_left = -150.0
+offset_top = 91.0
+offset_right = 33.0
+offset_bottom = 114.0
+scale = Vector2(8, 8)
+text = "Your Time: Three!!!!!"
+label_settings = SubResource("LabelSettings_2avc6")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Interface/EndingBackground/Button" to="Interface/EndingBackground" method="_on_button_pressed"]

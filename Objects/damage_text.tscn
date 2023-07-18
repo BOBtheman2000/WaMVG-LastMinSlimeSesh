@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dew21vf20mn2b"]
+
+[ext_resource type="FontFile" uid="uid://cy436dbo2ce77" path="res://Fonts/NotJamScrawl9.ttf" id="1_1xky7"]
+[ext_resource type="Script" path="res://Objects/damage_text.gd" id="1_eoakh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1gwk"]
+font = ExtResource("1_1xky7")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+outline_color = Color(1, 0, 0, 1)
+
+[node name="DamageText" type="Label"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+text = "3"
+label_settings = SubResource("LabelSettings_v1gwk")
+script = ExtResource("1_eoakh")

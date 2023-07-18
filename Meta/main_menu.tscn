@@ -1,0 +1,291 @@
+[gd_scene load_steps=20 format=3 uid="uid://cyv4ag2dhe3b8"]
+
+[ext_resource type="Texture2D" uid="uid://cvtrw7ro3v7fo" path="res://Assets/TempBackground.png" id="1_1jfdo"]
+[ext_resource type="Texture2D" uid="uid://dnueo3kp53jwp" path="res://Assets/Menu/ButtonBoxHover.png" id="1_36i8y"]
+[ext_resource type="Texture2D" uid="uid://6tj2gxh74v8l" path="res://Assets/Menu/ButtonBox.png" id="1_tjr2k"]
+[ext_resource type="Script" path="res://Meta/main_menu.gd" id="2_4ayej"]
+[ext_resource type="FontFile" uid="uid://cy436dbo2ce77" path="res://Fonts/NotJamScrawl9.ttf" id="2_7guxl"]
+[ext_resource type="Texture2D" uid="uid://d37q4qi2sufr8" path="res://Assets/Menu/ButtonBoxClick.png" id="2_x2lao"]
+[ext_resource type="Texture2D" uid="uid://ro4iuaj74iv4" path="res://Assets/GradientOrb.png" id="7_o7sks"]
+[ext_resource type="Texture2D" uid="uid://do0jlo2smkt8" path="res://Assets/Menu/CreditPictures/Me.png" id="8_iw4mo"]
+[ext_resource type="Texture2D" uid="uid://bs2ct5l0d3lh1" path="res://Assets/Menu/CreditPictures/Matty.png" id="9_gv6gk"]
+[ext_resource type="Script" path="res://Meta/Icon.gd" id="9_h0o1k"]
+[ext_resource type="Texture2D" uid="uid://djsvl6vfenvk" path="res://Assets/Menu/CreditPictures/Sam.png" id="10_usnxq"]
+[ext_resource type="Texture2D" uid="uid://dp2aynuary0fg" path="res://Assets/Menu/CreditPictures/Tansley.png" id="12_p7en2"]
+[ext_resource type="Texture2D" uid="uid://f3n46c1lhj46" path="res://Assets/Menu/Tutorial.png" id="13_qbses"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx20n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04teb"]
+texture = ExtResource("1_36i8y")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ox2a5"]
+texture = ExtResource("1_tjr2k")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs75d"]
+texture = ExtResource("2_x2lao")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="Theme" id="Theme_yfda8"]
+default_font = ExtResource("2_7guxl")
+default_font_size = 54
+BoxContainer/constants/separation = 24
+Button/styles/focus = SubResource("StyleBoxEmpty_tx20n")
+Button/styles/hover = SubResource("StyleBoxTexture_04teb")
+Button/styles/normal = SubResource("StyleBoxTexture_ox2a5")
+Button/styles/pressed = SubResource("StyleBoxTexture_fs75d")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwnyy"]
+font = ExtResource("2_7guxl")
+font_size = 9
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yfda8")
+script = ExtResource("2_4ayej")
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(11, 11)
+texture = ExtResource("1_1jfdo")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 105, 59)
+
+[node name="LeftLight" type="PointLight2D" parent="BG"]
+position = Vector2(0, 30)
+color = Color(0.835294, 0.603922, 0, 1)
+energy = 1.3
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("7_o7sks")
+texture_scale = 6.0
+
+[node name="LeftLight2" type="PointLight2D" parent="BG"]
+position = Vector2(104.909, 30)
+color = Color(0.835294, 0, 0, 1)
+energy = 1.3
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("7_o7sks")
+texture_scale = 6.0
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = 77.0
+offset_bottom = 101.0
+grow_horizontal = 2
+scale = Vector2(8, 8)
+pivot_offset = Vector2(576, 0)
+text = "Last Minute
+Slime Session"
+label_settings = SubResource("LabelSettings_fwnyy")
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+offset_top = 60.0
+offset_bottom = 23.0
+grow_horizontal = 2
+pivot_offset = Vector2(576, 0)
+text = "Back"
+
+[node name="Interactibles" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.9
+
+[node name="GameButtons" type="HBoxContainer" parent="Interactibles"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Play" type="Button" parent="Interactibles/GameButtons"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 11
+mouse_default_cursor_shape = 2
+text = "Play"
+
+[node name="Credits" type="Button" parent="Interactibles/GameButtons"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 11
+mouse_default_cursor_shape = 2
+text = "Credits"
+
+[node name="Credits" type="VBoxContainer" parent="Interactibles"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Main" type="HBoxContainer" parent="Interactibles/Credits"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Me" type="HBoxContainer" parent="Interactibles/Credits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Icon" type="TextureButton" parent="Interactibles/Credits/Main/Me"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_iw4mo")
+stretch_mode = 4
+script = ExtResource("9_h0o1k")
+socials_link = "https://twitter.com/CouldBeBarney"
+
+[node name="Label" type="Label" parent="Interactibles/Credits/Main/Me"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 26
+text = "Programming
+Sound design
+
+Barney"
+vertical_alignment = 1
+
+[node name="Matty" type="HBoxContainer" parent="Interactibles/Credits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.85
+alignment = 2
+
+[node name="Label" type="Label" parent="Interactibles/Credits/Main/Matty"]
+layout_mode = 2
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 26
+text = "Spritework
+Programming
+
+Matthew Kursar"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Icon" type="TextureButton" parent="Interactibles/Credits/Main/Matty"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_gv6gk")
+stretch_mode = 4
+script = ExtResource("9_h0o1k")
+socials_link = "https://twitch.tv/Galiennn"
+
+[node name="OST" type="HBoxContainer" parent="Interactibles/Credits"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sam" type="HBoxContainer" parent="Interactibles/Credits/OST"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Icon" type="TextureButton" parent="Interactibles/Credits/OST/Sam"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_usnxq")
+stretch_mode = 4
+script = ExtResource("9_h0o1k")
+socials_link = "https://open.spotify.com/artist/74fdTYPHye4Em5i5PyThl5?si=3e62522b690d4290"
+
+[node name="Label" type="Label" parent="Interactibles/Credits/OST/Sam"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Soundtrack
+(Main Theme)
+
+Samuel Lewis (VII)"
+vertical_alignment = 1
+
+[node name="Tansley" type="HBoxContainer" parent="Interactibles/Credits/OST"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.9
+alignment = 2
+
+[node name="Label" type="Label" parent="Interactibles/Credits/OST/Tansley"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Soundtrack
+(Ending Themes)
+
+Tansley Green"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Icon" type="TextureButton" parent="Interactibles/Credits/OST/Tansley"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_p7en2")
+stretch_mode = 4
+script = ExtResource("9_h0o1k")
+socials_link = "https://open.spotify.com/artist/2BSNiLraB6bZZBytc1ui6F?si=b22f8de591ff4f3d"
+
+[node name="Tutorial" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(98, 21)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_qbses")
+centered = false
+
+[node name="PlayFr" type="Button" parent="Tutorial"]
+texture_filter = 1
+offset_left = 1362.0
+offset_top = 930.0
+offset_right = 2030.0
+offset_bottom = 1189.0
+size_flags_horizontal = 11
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_yfda8")
+text = "Yeah I know"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Interactibles/GameButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Interactibles/GameButtons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Tutorial/PlayFr" to="." method="_on_play_fr_pressed"]
