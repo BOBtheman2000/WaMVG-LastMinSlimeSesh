@@ -1,0 +1,26 @@
+Things that need doing for the post-jam build! This will be changed into a "Patchnotes" file on completion
+
+-- Clarity & Feedback additions
+
+- Tutorial page redesigned to use no text, entirely visual
+- Red healing orb moved to inside of slimes when held, to better indicate function
+- More feedback added to barracades being damaged
+- Hover feedback added to credits page icons
+- Dark text on unaffordable shop item prices
+- Slight increase to size of shop price text
+
+-- Technical fixes
+
+- Fix to crash when returning to the main menu
+- Fix to poor scaling on pixel font with unusual window sizes (Borderline unreadable on small screens)
+
+-- Meta adjustments
+
+- "Made for the GMTK Game Jam 2023" icon added to the main menu
+- App icon added
+- Desktop window title adjusted
+- Source code distributed :3
+
+These are only small quality of life changes that bring the game into a more playable state.
+They do not differ from the core gameplay or experience provided with the initial build released for the jam.
+Only game breaking technical bugs and changes within feasible scope of the jam's constraints are included.

@@ -400,6 +400,7 @@ text = "Main Menu"
 
 [node name="Time" type="Label" parent="Interface/EndingBackground"]
 texture_filter = 1
+layout_mode = 0
 offset_left = -150.0
 offset_top = 91.0
 offset_right = 33.0
