@@ -515,4 +515,5 @@ func barracade_done():
 	stopped_for_barracade = false
 
 func barracade_tick():
-	swing_weapon()
+	if stopped_for_barracade:
+		swing_weapon()

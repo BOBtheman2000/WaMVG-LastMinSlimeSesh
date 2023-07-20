@@ -20,6 +20,7 @@ var ending_step = 0
 var dragon_health = DRAGON_HEALTH_MAX
 
 var barracade_scene = preload("res://Objects/barracade.tscn")
+var barracade_doing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -71,17 +72,21 @@ func _on_combat_zone_body_entered(body):
 		get_tree().call_group("Players", "barracade_pause")
 		get_tree().call_group("Slimes", "barracade_pause")
 		$BarracadeTick.start()
+		barracade_doing = true
 		body.active = true
 		body.connect("barracade_done", barracade_done)
 
 func _on_barracade_tick_timeout():
 	get_tree().call_group("Players", "barracade_tick")
 	get_tree().call_group("Barracades", "barracade_tick")
-	$BarracadeTick.start()
+	if !barracade_doing:
+		$BarracadeTick.start()
 
 func barracade_done():
 	get_tree().call_group("Players", "barracade_done")
 	get_tree().call_group("Slimes", "barracade_done")
+	barracade_doing = false
+	$BarracadeTick.stop()
 
 func _on_combat_tick_timeout():
 	emit_signal("combat_tick")

@@ -12,7 +12,7 @@ X Slight increase to size of shop price text
 
 -- Small Bugfixes
 
-- Make players stop swinging their weapons when dragon cutscene starts
+X Make players stop swinging their weapons when barracade breaks
 X Slime level text change on level change instead of hover
 
 -- Technical fixes
