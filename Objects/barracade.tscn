@@ -1,10 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqlf4qlooqowi"]
+[gd_scene load_steps=9 format=3 uid="uid://bqlf4qlooqowi"]
 
 [ext_resource type="Script" path="res://Objects/barracade.gd" id="1_epj2y"]
 [ext_resource type="Texture2D" uid="uid://bt4fscyi7knt8" path="res://Assets/Barricade.png" id="1_vvdsx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6h02i"]
 size = Vector2(138, 415)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yblta"]
+atlas = ExtResource("1_vvdsx")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynjgr"]
+atlas = ExtResource("1_vvdsx")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd4q0"]
+atlas = ExtResource("1_vvdsx")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jx20"]
+atlas = ExtResource("1_vvdsx")
+region = Rect2(32, 64, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sjof5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yblta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynjgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd4q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jx20")
+}],
+"loop": false,
+"name": &"break",
+"speed": 0.0
+}]
 
 [node name="Barracade" type="StaticBody2D" groups=["Barracades"]]
 script = ExtResource("1_epj2y")
@@ -13,7 +49,8 @@ script = ExtResource("1_epj2y")
 position = Vector2(-59, -8.5)
 shape = SubResource("RectangleShape2D_6h02i")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(8, 8)
-texture = ExtResource("1_vvdsx")
+sprite_frames = SubResource("SpriteFrames_sjof5")
+animation = &"break"

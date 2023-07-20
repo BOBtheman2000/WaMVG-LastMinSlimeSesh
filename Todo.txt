@@ -2,9 +2,9 @@ Things that need doing for the post-jam build! This will be changed into a "Patc
 
 -- Clarity & Feedback additions
 
-- Tutorial page redesigned to use no text, entirely visual
+X Tutorial page redesigned to use no text, entirely visual
 - Red healing orb moved to inside of slimes when held, to better indicate function
-- More feedback added to barracades being damaged
+X More feedback added to barracades being damaged (Damage sprites, shaking)
 - Hover feedback added to credits page icons
 - Dark text on unaffordable shop item prices
 - Slight increase to size of shop price text
@@ -18,7 +18,7 @@ Things that need doing for the post-jam build! This will be changed into a "Patc
 
 - "Made for the GMTK Game Jam 2023" icon added to the main menu
 - App icon added
-- Desktop window title adjusted
+X Desktop window title adjusted
 - Source code distributed :3
 
 These are only small quality of life changes that bring the game into a more playable state.
