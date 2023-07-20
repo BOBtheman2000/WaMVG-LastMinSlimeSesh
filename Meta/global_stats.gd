@@ -14,6 +14,7 @@ func set_default_stats():
 func add_gold(amount):
 	gold += amount
 	get_tree().call_group("Labels", "update_label")
+	get_tree().call_group("GoldItems", "gold_update")
 
 func play_sound(path):
 	var sound_node = get_node("Sounds/"+path)

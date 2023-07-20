@@ -36,7 +36,7 @@ outline_size = 4
 
 [sub_resource type="LabelSettings" id="LabelSettings_6rsm1"]
 font = ExtResource("2_vdm6r")
-font_size = 18
+font_size = 27
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybakp"]
 bg_color = Color(1, 1, 1, 0)
@@ -125,7 +125,7 @@ label_settings = SubResource("LabelSettings_rryh0")
 vertical_alignment = 1
 script = ExtResource("3_reen1")
 
-[node name="SlimeLayer" type="Node2D" parent="Interface"]
+[node name="SlimeLayer" type="Node2D" parent="Interface" groups=["GoldItems"]]
 script = ExtResource("3_niudm")
 
 [node name="SiderackBG" type="Sprite2D" parent="Interface/SlimeLayer"]
@@ -183,9 +183,9 @@ texture = ExtResource("8_4dx8s")
 centered = false
 
 [node name="Price" type="Label" parent="Interface/SlimeLayer/HealthPickupBG"]
-offset_top = 21.0
+offset_top = 20.0001
 offset_right = 161.0
-offset_bottom = 48.0
+offset_bottom = 51.0001
 scale = Vector2(0.2, 0.2)
 text = "5g"
 label_settings = SubResource("LabelSettings_6rsm1")
@@ -200,9 +200,9 @@ texture = ExtResource("9_fhb1y")
 centered = false
 
 [node name="Price" type="Label" parent="Interface/SlimeLayer/BarracadeBG"]
-offset_top = 21.0
+offset_top = 20.0001
 offset_right = 161.0
-offset_bottom = 48.0
+offset_bottom = 51.0001
 scale = Vector2(0.2, 0.2)
 text = "5g"
 label_settings = SubResource("LabelSettings_6rsm1")
@@ -400,6 +400,7 @@ text = "Main Menu"
 
 [node name="Time" type="Label" parent="Interface/EndingBackground"]
 texture_filter = 1
+layout_mode = 0
 offset_left = -150.0
 offset_top = 91.0
 offset_right = 33.0

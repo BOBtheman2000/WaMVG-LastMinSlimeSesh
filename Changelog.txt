@@ -1,0 +1,32 @@
+Post-jam build patchnotes! This is a list of changes from the original release for the 2023 GMTK game jam.
+
+-- Clarity & Feedback additions
+
+X Tutorial page redesigned to use no text, entirely visual
+X Red healing orb moved on top of slimes when held, to better indicate function
+X More feedback added to barracades being damaged (Damage sprites, shaking)
+X Hover feedback added to credits page icons
+X Dark text on unaffordable shop item prices
+X Shop items blink when affordable
+X Slight increase to size of shop price text
+
+-- Small Bugfixes
+
+X Make players stop swinging their weapons when barracade breaks
+X Slime level text change on level change instead of hover
+
+-- Technical fixes
+
+? Fix to crash when returning to the main menu on non-debug builds (This bug is inconsistent and I'm not sure if it's actually fixed)
+X Removed anti-aliasing on pixel font (Unreadable on odd window sizes)
+
+-- Meta adjustments
+
+X "Made for the GMTK Game Jam 2023" icon added to the main menu
+X App icon added
+X Desktop window title adjusted
+X Source code distributed :3
+
+These are only small quality of life changes that bring the game into a more playable state.
+They do not differ from the core gameplay or experience provided with the initial build released for the jam.
+Only game breaking technical bugs and changes within feasible scope of the jam's constraints are included.
