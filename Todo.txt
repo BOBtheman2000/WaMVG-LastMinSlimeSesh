@@ -17,13 +17,13 @@ X Slime level text change on level change instead of hover
 
 -- Technical fixes
 
-- Fix to crash when returning to the main menu
+? Fix to crash when returning to the main menu on non-debug builds (This bug is inconsistent and I'm not sure if it's actually fixed)
 X Removed anti-aliasing on pixel font (Unreadable on odd window sizes)
 
 -- Meta adjustments
 
 X "Made for the GMTK Game Jam 2023" icon added to the main menu
-- App icon added
+X App icon added
 X Desktop window title adjusted
 - Source code distributed :3
 
