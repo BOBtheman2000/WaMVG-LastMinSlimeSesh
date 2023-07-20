@@ -279,6 +279,7 @@ func level_up(levels):
 		GlobalStats.play_sound("Levelup")
 	GlobalStats.play_sound("LevelupLite")
 	
+	$LevelCurr.text = "Level " + str(level)
 	$Levelup.text = "Level " + str(level) + "!"
 	
 	$Levelup.modulate.a = 1.0
@@ -441,6 +442,7 @@ func release_slime():
 		elif past_health:
 			if !has_weapon and !has_health_pickup and GlobalStats.gold >= get_parent().health_price:
 				has_health_pickup = true
+				$Weapon.position.x = 34
 				$Weapon.animation = "other"
 				$Weapon.frame = 2
 				var particles = create_particle_explosion(Color.GOLDENROD)
@@ -502,6 +504,7 @@ func set_weapon(item):
 func clear_weapon():
 	has_health_pickup = false
 	has_weapon = false
+	$Weapon.position.x = -14
 	$Weapon.animation = "other"
 	$Weapon.frame = 0
 

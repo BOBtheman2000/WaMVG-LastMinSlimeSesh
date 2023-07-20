@@ -229,9 +229,9 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_h7oc7"]
 font = ExtResource("2_k8enn")
-font_size = 18
+font_size = 27
 
-[node name="ShopItem" type="Area2D" groups=["ShopItem"]]
+[node name="ShopItem" type="Area2D" groups=["GoldItems", "ShopItem"]]
 script = ExtResource("1_nsowk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

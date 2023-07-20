@@ -18,6 +18,7 @@ var item_position_default = Vector2(0, 0)
 func _ready():
 	update_item_display()
 	item_position_default = position
+	$ItemPrice.modulate = Color.BLACK
 
 func _physics_process(delta):
 	if item_shake_time > 0:
@@ -51,6 +52,17 @@ func update_item_display():
 	$ItemSprite.animation = item_types[item_type]
 	$ItemSprite.frame = item_index
 	$ItemPrice.text = str(item_price) + "g"
+
+func gold_update():
+	if item_price <= GlobalStats.gold:
+		if $ItemPrice.modulate == Color.BLACK:
+			$ItemPrice.modulate = Color.GOLDENROD
+			var tween = get_tree().create_tween()
+			tween.set_trans(Tween.TRANS_CUBIC)
+			tween.set_ease(Tween.EASE_IN)
+			tween.tween_property($ItemPrice, "modulate", Color.WHITE, 0.4)
+	else:
+		$ItemPrice.modulate = Color.BLACK
 
 func shake_item():
 	item_shake_time += 5

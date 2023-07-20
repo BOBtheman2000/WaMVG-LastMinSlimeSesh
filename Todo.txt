@@ -3,11 +3,17 @@ Things that need doing for the post-jam build! This will be changed into a "Patc
 -- Clarity & Feedback additions
 
 X Tutorial page redesigned to use no text, entirely visual
-- Red healing orb moved to inside of slimes when held, to better indicate function
+X Red healing orb moved on top of slimes when held, to better indicate function
 X More feedback added to barracades being damaged (Damage sprites, shaking)
 X Hover feedback added to credits page icons
-- Dark text on unaffordable shop item prices
-- Slight increase to size of shop price text
+X Dark text on unaffordable shop item prices
+X Shop items blink when affordable
+X Slight increase to size of shop price text
+
+-- Small Bugfixes
+
+- Make players stop swinging their weapons when dragon cutscene starts
+X Slime level text change on level change instead of hover
 
 -- Technical fixes
 
