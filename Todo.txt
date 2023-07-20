@@ -5,7 +5,7 @@ Things that need doing for the post-jam build! This will be changed into a "Patc
 X Tutorial page redesigned to use no text, entirely visual
 - Red healing orb moved to inside of slimes when held, to better indicate function
 X More feedback added to barracades being damaged (Damage sprites, shaking)
-- Hover feedback added to credits page icons
+X Hover feedback added to credits page icons
 - Dark text on unaffordable shop item prices
 - Slight increase to size of shop price text
 
