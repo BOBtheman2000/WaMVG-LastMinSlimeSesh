@@ -18,11 +18,11 @@ X Slime level text change on level change instead of hover
 -- Technical fixes
 
 - Fix to crash when returning to the main menu
-- Fix to poor scaling on pixel font with unusual window sizes (Borderline unreadable on small screens)
+X Removed anti-aliasing on pixel font (Unreadable on odd window sizes)
 
 -- Meta adjustments
 
-- "Made for the GMTK Game Jam 2023" icon added to the main menu
+X "Made for the GMTK Game Jam 2023" icon added to the main menu
 - App icon added
 X Desktop window title adjusted
 - Source code distributed :3

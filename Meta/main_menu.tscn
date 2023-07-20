@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cyv4ag2dhe3b8"]
+[gd_scene load_steps=21 format=3 uid="uid://cyv4ag2dhe3b8"]
 
 [ext_resource type="Texture2D" uid="uid://cvtrw7ro3v7fo" path="res://Assets/TempBackground.png" id="1_1jfdo"]
 [ext_resource type="Texture2D" uid="uid://dnueo3kp53jwp" path="res://Assets/Menu/ButtonBoxHover.png" id="1_36i8y"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d37q4qi2sufr8" path="res://Assets/Menu/ButtonBoxClick.png" id="2_x2lao"]
 [ext_resource type="Texture2D" uid="uid://ro4iuaj74iv4" path="res://Assets/GradientOrb.png" id="7_o7sks"]
 [ext_resource type="Texture2D" uid="uid://do0jlo2smkt8" path="res://Assets/Menu/CreditPictures/Me.png" id="8_iw4mo"]
+[ext_resource type="Texture2D" uid="uid://xr0wo6tjns00" path="res://Assets/Menu/gameJam.png" id="8_yyv8b"]
 [ext_resource type="Texture2D" uid="uid://bs2ct5l0d3lh1" path="res://Assets/Menu/CreditPictures/Matty.png" id="9_gv6gk"]
 [ext_resource type="Script" path="res://Meta/Icon.gd" id="9_h0o1k"]
 [ext_resource type="Texture2D" uid="uid://djsvl6vfenvk" path="res://Assets/Menu/CreditPictures/Sam.png" id="10_usnxq"]
@@ -118,11 +119,18 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
 anchor_right = 0.8
-offset_top = 60.0
-offset_bottom = 23.0
+offset_left = -167.4
+offset_top = 89.0
+offset_right = -167.4
+offset_bottom = 240.0
 grow_horizontal = 2
 pivot_offset = Vector2(576, 0)
 text = "Back"
+
+[node name="JamCredit" type="Sprite2D" parent="Back"]
+position = Vector2(888, 73)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("8_yyv8b")
 
 [node name="Interactibles" type="Control" parent="."]
 layout_mode = 1
